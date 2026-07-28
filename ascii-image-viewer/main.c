@@ -13,7 +13,7 @@ int main(void) {
   for (int y = 0; y < HEIGHT; y += 2) {
     for (int x = 0; x < WIDTH; x += 2) {
       unsigned char pixel[3];
-      if ((x) % 2 == 0) {
+      if ((x + y) % 2 == 0) {
         pixel[0] = 255;
         pixel[1] = 255;
         pixel[2] = 255;

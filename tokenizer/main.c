@@ -18,7 +18,7 @@ available_types check_type(char c);
 void clear_string(token* t);
 
 int main(void) {
-  char s[] = "My name is 123";
+  char s[] = "hello 123  ss";
   size_t string_len = strlen(s);
 
   token temp_token;
