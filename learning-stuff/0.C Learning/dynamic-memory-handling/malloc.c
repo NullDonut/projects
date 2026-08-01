@@ -11,6 +11,7 @@ struct int_array create_array(int base_size);
 void resize_array(struct int_array* ar, int new_size);
 void print_status(struct int_array i1);
 void append(struct int_array* i1, int value);
+void pop(struct int_array* i1);
 
 int main(void) {
   struct int_array i1 = create_array(5);
@@ -22,6 +23,7 @@ int main(void) {
   append(&i1, 2);
   append(&i1, 2);
   append(&i1, 2);
+  pop(&i1);
   print_status(i1);
   free(i1.ptr);
 }
@@ -32,6 +34,10 @@ void append(struct int_array* i1, int value) {
   }
   i1->ptr[i1->used] = value;
   i1->used += 1;
+}
+void pop(struct int_array* i1) {
+  i1->ptr[i1->used - 1] = 0;
+  --i1->used;
 }
 struct int_array create_array(int base_size) {
   struct int_array ar;
