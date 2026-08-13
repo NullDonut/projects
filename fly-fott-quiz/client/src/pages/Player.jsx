@@ -145,7 +145,7 @@ function Player() {
     return (
       <div className="app player-app">
         <div className="auth-screen">
-          <div className="logo">👋</div>
+          <img className="logo-img" src="/logo.jpg" alt="Fylfot Quiz logo" />
           <h1>Session ended</h1>
           <p>The host closed this room. Thanks for playing!</p>
         </div>
@@ -158,7 +158,7 @@ function Player() {
       <div className="app player-app">
         {error && <div className="toast error">{error}</div>}
         <div className="auth-screen">
-          <div className="logo">🕹️</div>
+          <img className="logo-img" src="/logo.jpg" alt="Fylfot Quiz logo" />
           <h1>Join the quiz</h1>
           <p className="subtitle">Room <strong>{roomCode}</strong></p>
           <div className="card">
@@ -175,6 +175,7 @@ function Player() {
               ▶️ Join game
             </button>
           </div>
+          <div className="footer-credit">Made by <b>nullDonut</b> &amp; <b>Pranjal Bhatt</b> for the school quiz</div>
         </div>
       </div>
     );
@@ -196,6 +197,7 @@ function Player() {
               </div>
             ))}
           </div>
+          <div className="footer-credit">Made by <b>nullDonut</b> &amp; <b>Pranjal Bhatt</b> for the school quiz</div>
         </div>
       </div>
     );
@@ -205,7 +207,7 @@ function Player() {
     return (
       <div className="app player-app">
         <div className="waiting-screen">
-          <div className="logo">⏳</div>
+          <img className="logo-img" src="/logo.jpg" alt="Fylfot Quiz logo" />
           <h1>Waiting for the quiz…</h1>
           <p>Hi <strong>{name}</strong> — you're in room {roomCode}. The host will start the first question soon.</p>
         </div>

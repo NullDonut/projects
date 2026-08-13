@@ -162,7 +162,7 @@ function Judge() {
 
       {!roomCode && (
         <div className="auth-screen">
-          <div className="logo">🎤</div>
+          <img className="logo-img" src="/logo.jpg" alt="Fylfot Quiz logo" />
           <h1>Fly &amp; Fott Quiz</h1>
           <p className="subtitle">Judge console — host the room, run the rounds, reveal the glory.</p>
 
@@ -191,7 +191,7 @@ function Judge() {
       {roomCode && status === 'lobby' && (
         <div className="lobby">
           <header className="topbar">
-            <h1>🎤 Fly &amp; Fott Quiz</h1>
+            <h1><img className="logo-img" src="/logo.jpg" alt="" /> Fly &amp; Fott Quiz</h1>
             <button className="btn ghost" onClick={newSession}>♻️ New room</button>
           </header>
 
@@ -241,7 +241,7 @@ function Judge() {
       {roomCode && (status === 'question' || status === 'revealed') && question && (
         <div className="live">
           <header className="topbar">
-            <h1>🎤 {roomCode} <span className="round-tag">{round === 'rapidfire' ? '⚡ Rapid Fire' : '💎 Individual'}</span></h1>
+            <h1><img className="logo-img" src="/logo.jpg" alt="" /> {roomCode} <span className="round-tag">{round === 'rapidfire' ? '⚡ Rapid Fire' : '💎 Individual'}</span></h1>
             <button className="btn ghost" onClick={newSession}>♻️ New room</button>
           </header>
 
@@ -305,7 +305,7 @@ function Judge() {
       {roomCode && status === 'finished' && finals && (
         <div className="finale">
           <header className="topbar">
-            <h1>🎤 {roomCode}</h1>
+            <h1><img className="logo-img" src="/logo.jpg" alt="" /> {roomCode}</h1>
             <button className="btn ghost" onClick={newSession}>♻️ New room</button>
           </header>
           <div className="confetti">🏆</div>
@@ -322,6 +322,8 @@ function Judge() {
           <button className="btn primary big" onClick={newSession}>♻️ Start a new session</button>
         </div>
       )}
+
+      <div className="footer-credit">Made by <b>nullDonut</b> &amp; <b>Pranjal Bhatt</b> for the school quiz</div>
     </div>
   );
 }
